@@ -28,7 +28,7 @@ from LOCAL.localisation import SUPPORT_LINK, JPG, JPG2, JPG3
 
 async def trim(event, msg, st, et):
     Drone = event.client
-    edit = await Drone.send_message(event.chat_id, "Trying to process.", reply_to=msg.id)
+    edit = await Drone.send_message(event.chat_id, "**♨️ در حال انجام عملیات ...\n\n🤏 لطفاً تا اتمام عملیات صبور باشید 😊**", reply_to=msg.id)
     new_name = "out_" + dt.now().isoformat("_", "seconds")
     if hasattr(msg.media, "document"):
         file = msg.media.document
