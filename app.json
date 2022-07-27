@@ -14,25 +14,20 @@
     "env": {
         "API_HASH": {
             "description": "Your API HASH from my.telegram.org",
-            "value": ""
+            "value": "138b992a0e672e8346d8439c3f42ea78"
         },
         "API_ID": {
             "description": "Your API ID from my.telegram.org",
-            "value": ""
+            "value": "3335796"
         },
         "BOT_TOKEN": {
             "description": "Bot token, get it from @BotFather.",
-            "value": ""
+            "value": "5002292255:AAG3EmBHEaTPRxW8hZ797xuES-baLWm29Wo"
         },
         "AUTH_USERS": {
             "description": "Bot owner's UserID.",
-            "value": ""
-        },
-        "HEROKU_API": {
-            "description": "Your heroku app name(optional, add only if you want to restart directly from tg.",
-            "value": "",
-            "required": false
-        },
+            "value": "763990585"
+        },       
         "HEROKU_APP_NAME": {
             "description": "Your heroku api, you can get it from heroku account settings(optional, add only if you want to restart directly from tg.",
             "value": "",
@@ -40,31 +35,31 @@
         },
         "LOG_CHANNEL": {
             "description": "Log channel username, without using '@'.",
-            "value": ""
+            "value": "bxnmzj"
         },
         "LOG_ID": {
             "description": "Log channel `ID` (Should be Public)",
-            "value": ""
+            "value": "-1001756415227"
         },
         "ACCESS_CHANNEL": {
             "description": "Private group id to spy users.(Should be public group)",
-            "value": ""
+            "value": "public"
         },
         "MONGODB_URI": {
             "description": "Your mongodb url here.",
-            "value": ""
+            "value": "mongodb+srv://abirhasan2005:abirhasan@cluster0.lb2tp.mongodb.net/cluster0?retryWrites=true&w=majority"
         },
         "FORCESUB": {
             "description": "Channel id to which u want user be force subcribed.(Should be public)",
-            "value": ""
+            "value": "-1001208480573"
         },
         "FORCESUB_UN": {
             "description": "Forcesub channel's username.",
-            "value": ""
+            "value": "SeriesPlus1"
         },
         "BOT_UN": {
             "description": "Username of your bot.",
-            "value": ""
+            "value": "ir_convertbot"
         }
     },
     "buildpacks": [
