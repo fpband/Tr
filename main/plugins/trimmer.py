@@ -58,7 +58,7 @@ async def trim(event, msg, st, et):
         print(e)
         return await edit.edit(f"**❌ خطا هنگام دانلود ویدیو مشکلی به وجود آمد**\n\n👀 [گزارش-مشکل](t.me/Farshidband)", link_preview=False) 
     try:
-        await edit.edit("Trimming.")
+        await edit.edit("**✂️ در حال برش دادن ویدیو ...**")
         bash(f'ffmpeg -i {name} -ss {st} -to {et} -acodec copy -vcodec copy {out}')
         out2 = new_name + '_2_' + '.mp4'
         rename(out, out2)
