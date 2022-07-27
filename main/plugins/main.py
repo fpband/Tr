@@ -460,7 +460,7 @@ async def vtrim(event):
             print(e)
             return await xx.edit("An error occured while waiting for the response.")
         try:
-            xy = await conv.send_message("📌حالا تایم پایان ویدیو را ارسال کنید.\n\n**⭕ مثال : `00:10:30`** ", buttons=markup)
+            xy = await conv.send_message("**📌حالا تایم پایان ویدیو را ارسال کنید.\n\n**⭕ مثال : `00:10:30`** ", buttons=markup)
             y = await conv.get_reply()
             et = y.text
             await xy.delete()                    
