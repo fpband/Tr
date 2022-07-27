@@ -13,8 +13,8 @@ from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
 async def start(event):
     await event.reply(f'**👋 سلام [{event.sender.first_name}](tg://user?id={event.sender_id}) عزیز خوش آمدید 🥰**\n\n**• با استفاده از این ربات میتوانید ویدیو های خود به دلخواه برش بدید.\n\nهمچنین صدای ویدیو را استخراج کنید.\n\nهم اکنون فایل ویدیویی تان را ارسال کنید😊**\n\n🖍️ سازنده ربات : [FﾑRSみɨの-BﾑŊの](t.me/farshidband)',                    
                          [
-                         Button.inline("📚 راهنمای ربات", data="plugins"),
-                         Button.inline("📢 کانال پشتیبان", url=f"(UPDATES_CHAANEL)")]])                        
+                         Button.inline("🛠️ سازنده ربات", url=f"(t.me/farshidband"),
+                         Button.inline("📢 کانال پشتیبان", url=f"(t.me/irbotz)")]])                        
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} started the BOT')
     
