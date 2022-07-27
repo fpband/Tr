@@ -11,7 +11,7 @@ from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
 
 @Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
-    await event.reply(f'**👋 سلام [{event.sender.first_name}](tg://user?id={event.sender_id}) عزیز خوش آمدید 🥰**\n\n🤖 ',                    
+    await event.reply(f'**👋 سلام [{event.sender.first_name}](tg://user?id={event.sender_id}) عزیز خوش آمدید 🥰**\n\n**• با استفاده از این ربات میتوانید ویدیو های خود به دلخواه برش بدید.\n\nهمچنین صدای ویدیو را استخراج کنید.\n\nهم اکنون فایل ویدیویی تان را ارسال کنید😊**\n\n🖍️ سازنده ربات :',                    
                          [
                          Button.inline("📚 راهنمای ربات", data="plugins"),
                          Button.inline("📢 کانال پشتیبان", url=f"(UPDATES_CHAANEL)")]])                        
