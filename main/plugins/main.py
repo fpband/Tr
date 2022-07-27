@@ -48,11 +48,9 @@ async def compin(event):
                 return await event.reply(f'you are Banned to use me!\n\ncontact [SUPPORT]({SUPPORT_LINK})', link_preview=False)
             video = event.file.mime_type
             if 'video' in video:
-                await event.reply("📽",
-                            buttons=[                    
-                                [Button.inline("CONVERT", data="convert"),
-                                 Button.inline("RENAME", data="rename")],
-                                [Button.inline("SSHOTS", data="sshots"),
+                await event.reply("**🌀 حالا انتخاب کنید 👇👇**",
+                            buttons=[                                                
+                                [Button.inline("🎙️ استخراج صدای ویدیو", data="mp3"),
                                  Button.inline("✂️ برش ویدیو", data="trim")]
                             ])
             elif 'png' in video:
@@ -105,13 +103,9 @@ async def convert(event):
                         
 @Drone.on(events.callbackquery.CallbackQuery(data="back"))
 async def back(event):
-    await event.edit("📽", buttons=[
-                    [Button.inline("ENCODE", data="encode"),
-                     Button.inline("COMPRESS", data="compress")],
-                    [Button.inline("CONVERT", data="convert"),
-                     Button.inline("RENAME", data="rename")],
-                    [Button.inline("SSHOTS", data="sshots"),
-                     Button.inline("TRIM", data="trim")]])
+    await event.edit("📽", buttons=[                  
+                    [Button.inline("🎙️ استخراج صدای ویدیو", data="mp3"),
+                     Button.inline("✂️ برش ویدیو", data="trim")]])
     
 #-----------------------------------------------------------------------------------------
 
@@ -456,7 +450,7 @@ async def vtrim(event):
     markup = event.client.build_reply_markup(Button.force_reply())
     async with Drone.conversation(event.chat_id) as conv: 
         try:
-            xx = await conv.send_message("send me the start time of the video you want to trim from as a reply to this. \n\nIn format hh:mm:ss , for eg: `01:20:69` ", buttons=markup)
+            xx = await conv.send_message("**📌حالا تایم شروع ویدیو را ارسال کنید.**\n\n**⭕ مثال : `00:04:30`** ", buttons=markup)
             x = await conv.get_reply()
             st = x.text
             await xx.delete()                    
@@ -466,7 +460,7 @@ async def vtrim(event):
             print(e)
             return await xx.edit("An error occured while waiting for the response.")
         try:
-            xy = await conv.send_message("send me the end time of the video you want to trim till as a reply to this.  \n\nIn format hh:mm:ss , for eg: `01:20:69` ", buttons=markup)
+            xy = await conv.send_message("📌حالا تایم پایان ویدیو را ارسال کنید.\n\n**⭕ مثال : `00:10:30`** ", buttons=markup)
             y = await conv.get_reply()
             et = y.text
             await xy.delete()                    
