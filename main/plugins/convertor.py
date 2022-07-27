@@ -50,13 +50,13 @@ async def mp3(event, msg):
         out = dt.now().isoformat("_", "seconds")
     try:
         DT = time.time()
-        await fast_download(name, file, Drone, edit, DT, "**DOWNLOADING:**")
+        await fast_download(name, file, Drone, edit, DT, "**📥 در حال دانلود ویدیو ...**")
     except Exception as e:
         os.rmdir("audioconvert")
         print(e)
         return await edit.edit(f"An error occured while downloading!\n\nContact [SUPPORT]({SUPPORT_LINK})")
     try:
-        await edit.edit("Converting.")
+        await edit.edit("⁦**🛠️⁩ در حال تبدیل ...**")
         bash(f"ffmpeg -i {name} -codec:a libmp3lame -q:a 0 {out}.mp3")
     except Exception as e:
         os.rmdir("audioconvert")
@@ -64,8 +64,8 @@ async def mp3(event, msg):
         return await edit.edit(f"An error occured while converting!\n\nContact [SUPPORT]({SUPPORT_LINK})")
     try:
         UT = time.time()
-        uploader = await fast_upload(f'{out}.mp3', f'{out}.mp3', UT, Drone, edit, '**UPLOADING:**')
-        await Drone.send_file(event.chat_id, uploader, thumb=JPG, caption=f'**AUDIO EXTRACTED by** : @{BOT_UN}', force_document=True)
+        uploader = await fast_upload(f'{out}.mp3', f'{out}.mp3', UT, Drone, edit, '**📤 در حال آپلود صدای ویدیو ...**')
+        await Drone.send_file(event.chat_id, uploader, thumb=JPG, caption=f'**🎛️ @{BOT_UN}**', force_document=True)
     except Exception as e:
         os.rmdir("audioconvert")
         print(e)
