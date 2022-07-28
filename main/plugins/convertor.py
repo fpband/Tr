@@ -27,7 +27,7 @@ from LOCAL.localisation import SUPPORT_LINK, JPG, JPG2
 
 async def mp3(event, msg):
     Drone = event.client
-    edit = await Drone.send_message(event.chat_id, "Trying to process!", reply_to=msg.id)
+    edit = await Drone.send_message(event.chat_id, "**♨️ در حال انجام عملیات ویدیو به صدا...**\n\n**🤏 لطفا تا اتمام عملیات صبور باشید 😊**", reply_to=msg.id)
     if hasattr(msg.media, "document"):
         file = msg.media.document
     else:
