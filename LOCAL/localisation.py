@@ -1,13 +1,13 @@
 #Don't be a thief by stealing other's Hardwork, it took time and effort to make this repo.
 #Respect my work by not making any changes here.
 
-START_TEXT = "Send me any file to begin..."
+START_TEXT = "**👋 سلام [{event.sender.first_name}](tg://user?id={event.sender_id}) عزیز خوش آمدید 🥰**\n\n**• با استفاده از این ربات میتوانید ویدیو های خود به دلخواه برش بدید.**\n\n**🎙️ همچنین صدای ویدیو را استخراج کنید.**\n\n**هم اکنون فایل ویدیویی تان را ارسال کنید😊**⁦🖍️⁩ سازنده ربات [Farshidband](t.me/farshidband)**"
 
 FORCE_SUB_TEXT = "In order to use this bot, you've to join my parent channel."
 
-CHANNEL_LINK = "https://t.me/DroneBots"
+CHANNEL_LINK = "https://t.me/irbotz"
 
-SUPPORT_LINK = "https://t.me/TeamDrone"
+SUPPORT_LINK = "https://t.me/farshidband"
 
 info_text = "This bot is developed by @MaheshChauhan\n\nWritten in python library TELETHON.\n\nBot by : @DroneBots\nSupport : @TeamDrone\n\nV1.4"   
 
