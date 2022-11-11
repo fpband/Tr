@@ -35,11 +35,11 @@
         },
         "LOG_CHANNEL": {
             "description": "Log channel username, without using '@'.",
-            "value": "bxnmzj"
+            "value": "wplus1"
         },
         "LOG_ID": {
             "description": "Log channel `ID` (Should be Public)",
-            "value": "-1001756415227"
+            "value": "-1001482606933"
         },
         "ACCESS_CHANNEL": {
             "description": "Private group id to spy users.(Should be public group)",
